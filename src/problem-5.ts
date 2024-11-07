@@ -19,4 +19,4 @@ const getProperty = <AAL, SAST extends keyof AAL>(
   return obj[key];
 };
 
-console.log(getProperty({ name: "Alice", age: 30 }, "age"));
+console.log(getProperty({ name: "Alice", age: 30 }, "name"));

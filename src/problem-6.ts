@@ -30,8 +30,8 @@ console.log(
     {
       name: "Alice",
       age: 26,
-      email: "alice@example.com",
+      email: "fcb@example.com",
     },
-    { age: 99, name: "AC Milan" }
+    { age: 99, name: "FCB" }
   )
 );

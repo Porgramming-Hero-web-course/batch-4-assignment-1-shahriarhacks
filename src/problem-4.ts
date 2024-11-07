@@ -43,7 +43,7 @@ console.log(calculateShapeArea({ shape: "circle", radius: 5 }));
 console.log(
   calculateShapeArea({
     shape: "rectangle",
-    width: 4,
+    width: 5,
     height: 6,
   })
 );

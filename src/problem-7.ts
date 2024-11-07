@@ -24,5 +24,5 @@ class Car {
     return runningYear - this.year;
   }
 }
-const car = new Car("Honda", "Civic", 2011);
+const car = new Car("Honda", "Civic", 2001);
 console.log(car.getCarAge());

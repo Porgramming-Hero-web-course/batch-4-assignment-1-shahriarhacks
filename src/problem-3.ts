@@ -15,4 +15,6 @@ const countWordOccurrences = (sentence: string, word: string): number => {
   const count = matchingWords.length;
   return count;
 };
-console.log(countWordOccurrences("I love typescript", "typescript"));
+console.log(
+  countWordOccurrences("TypeScript is great. I love TypeScript!", "typescript")
+);
