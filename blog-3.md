@@ -28,15 +28,15 @@ The typeof operator is a built-in JavaScript feature that checks primitive types
 
 Example:
 
-```
-function formatInput(input: string | number):number|string {
-if (typeof input === 'string') {
+```tsx
+function formatInput(input: string | number): number | string {
+  if (typeof input === "string") {
     return input.toUpperCase();
-}else if(typeof input ==='number'){
+  } else if (typeof input === "number") {
     return input ** 2;
-}else{
-    return 'Type unmatched'
-}
+  } else {
+    return "Type unmatched";
+  }
 }
 
 console.log(formatInput("hello"));
@@ -54,25 +54,25 @@ instanceof is particularly useful for distinguishing between instances of classe
 
 Example:
 
-```
+```tsx
 class Dog {
-bark() {
-console.log("Ghew Ghew!");
-}
+  bark() {
+    console.log("Ghew Ghew!");
+  }
 }
 
 class Cat {
-meow() {
-console.log("Meow Meow!");
-}
+  meow() {
+    console.log("Meow Meow!");
+  }
 }
 
 function makeSound(animal: Dog | Cat) {
-if (animal instanceof Dog) {
-animal.bark();
-} else if (animal instanceof Cat) {
-animal.meow();
-}
+  if (animal instanceof Dog) {
+    animal.bark();
+  } else if (animal instanceof Cat) {
+    animal.meow();
+  }
 }
 
 makeSound(new Dog());
@@ -90,7 +90,7 @@ The in operator is particularly useful when working with objects and checking fo
 
 Example:
 
-```
+```tsx
 interface Square {
 sideLength: number;
 }
@@ -122,25 +122,25 @@ For more complex types, you can create custom type guard functions. These functi
 
 Example:
 
-```
+```tsx
 interface Fish {
-    swim: () => void;
+  swim: () => void;
 }
 
 interface Bird {
-    fly: () => void;
+  fly: () => void;
 }
 
 function isFish(animal: Fish | Bird): animal is Fish {
-    return (animal as Fish).swim !== undefined;
+  return (animal as Fish).swim !== undefined;
 }
 
 function move(animal: Fish | Bird) {
-    if (isFish(animal)) {
-        animal.swim();
-    } else {
-        animal.fly();
-    }
+  if (isFish(animal)) {
+    animal.swim();
+  } else {
+    animal.fly();
+  }
 }
 
 const fish: Fish = { swim: () => console.log("Swimming") };
