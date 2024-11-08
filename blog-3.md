@@ -92,19 +92,21 @@ Example:
 
 ```tsx
 interface Square {
-sideLength: number;
+  sideLength: number;
 }
 
 interface Circle {
-radius: number;
+  radius: number;
 }
 
 function calculateArea(shape: Square | Circle) {
-if ("sideLength" in shape) {
-return shape.sideLength _ shape.sideLength;
-} else if ("radius" in shape) {
-return Math.PI _ shape.radius \* shape.radius;
-}
+  if ("sideLength" in shape) {
+    return shape.sideLength * shape.sideLength;
+  } else if ("radius" in shape) {
+    return Math.PI * shape.radius ** 2;
+  } else {
+    return "Shape unmatched!";
+  }
 }
 
 console.log(calculateArea({ sideLength: 5 }));
